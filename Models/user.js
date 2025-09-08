@@ -27,6 +27,10 @@ const userSchema = new mongoose.Schema({
         required: true,
         default: "Customer",
         enum: ["Customer", "Admin"]
+    },
+    address:{
+        type: String,
+        required: true
     }
 }, {timestamps: true, versionKey: false})
 
