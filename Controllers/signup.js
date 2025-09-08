@@ -13,7 +13,8 @@ const signup = async (req, res) => {
         userId : request_body.userId,
         email : request_body.email,
         userType : request_body.userType,
-        password : bcrypt.hashSync(request_body.password, 10)
+        password : bcrypt.hashSync(request_body.password, 10),
+         address : request_body.address,
      }
      try {
         const user_created = await user_model.create(user_obj)
